@@ -30,6 +30,8 @@ const App = (): JSX.Element => {
       <QuestionsCard
       questionNum={number + 1}
       totalQuestions = {TOTAL_QUESTIONS}
+      question = {questions[number].question}
+      answers = {questions[number].answers}
       />
       <button className="next__ques" onClick={NextQuestion}>
         Next Question
