@@ -4,7 +4,7 @@ import QuestionsCard from "components/QuestionCard/QuestionCard";
 
 const App = (): JSX.Element => {
   const [loading, setLoading] = useState<boolean>(false);
-  const [quetions, setQuestions] = useState<string[]>([]);
+  const [questions, setQuestions] = useState<string[]>([]);
   const [number, setNumber] = useState<number>(0);
   const [userAnswers, setUserANswers] = useState<string[]>([]);
   const [score, setScore] = useState<number>(0);
@@ -32,6 +32,8 @@ const App = (): JSX.Element => {
       totalQuestions = {TOTAL_QUESTIONS}
       question = {questions[number].question}
       answers = {questions[number].answers}
+      userAnswer = {userAnswers ? userAnswers[number] : undefined}
+      callback = {CheckAnswer}
       />
       <button className="next__ques" onClick={NextQuestion}>
         Next Question
