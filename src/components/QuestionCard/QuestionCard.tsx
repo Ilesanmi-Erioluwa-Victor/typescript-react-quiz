@@ -1,5 +1,5 @@
 import React from 'react'
-import { Props } from '/Types/Types'
+import { Props } from 'Types/Types'
 
 const QuestionsCard:React.FC<Props> = ({ question,answers,callback,userAnswer,questionNum, totalQuestions}) => {
   return (

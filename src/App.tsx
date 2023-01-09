@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import QuestionsCard from "components/QuestionsCard/QuestionsCard";
+import QuestionsCard from "components/QuestionCard/QuestionCard";
+
 
 const App = (): JSX.Element => {
   const [loading, setLoading] = useState<boolean>(false);
