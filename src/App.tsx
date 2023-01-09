@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import QuestionsCard from "components/QuestionsCard/QuestionsCard";
 
-function App() {
+const App = (): JSX.Element => {
+  const [loading, setLoading] = useState<boolean>(false);
+  const [quetions, setQuestions] = useState<string[]>([]);
+  const [number, setNumber] = useState<number>(0);
+  const [userAnswers, setUserANswers] = useState<string[]>([]);
+  const [score, setScore] = useState<number>(0);
+  const [gameOver, setGameOver] = useState<boolean>(true);
+
+  const TOTAL_QUESTIONS = 10;
+
+  const StartTrivia = async () => {};
+
+  const CheckAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {};
+
+  const NextQuestion = () => {};
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1> React Typescript Quiz Game</h1>
+
+      <button className="start__btn" onClick={StartTrivia}>
+        Start
+      </button>
+      <p className="quiz__score">Score : </p>
+      <p className="loader">Loading Questions ...</p>
+      <QuestionsCard
+      questionNum={number + 1}
+      totalQuestions = {TOTAL_QUESTIONS}
+      />
+      <button className="next__ques" onClick={NextQuestion}>
+        Next Question
+      </button>
     </div>
   );
-}
+};
 
 export default App;
