@@ -6,3 +6,11 @@ export type Props = {
     questionNum : number;
     totalQuestions : number;
 }
+
+// Neither of the three Enum
+
+export enum DifficultyState {
+    EASY = "easy",
+    MEDIUM = "medium",
+    HARD = "hard"
+}
