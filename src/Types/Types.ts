@@ -25,3 +25,10 @@ type: string
 }
 
 export type QuestionState = Question & {answers : string[]}
+
+export type AnswerObject = {
+ question : string;
+ answer : string;
+ correct : boolean;
+ correctAnswer : string;
+}
