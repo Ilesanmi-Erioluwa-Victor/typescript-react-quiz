@@ -1,5 +1,5 @@
 import { ShuffleArray } from './../../utils/ShuffleArray';
-import { DifficultyState, Question, QuestionState } from 'Types/Types';
+import { DifficultyState, Question} from 'Types/Types';
 
 
 export const FetchApi = async (amount:number, difficulty : DifficultyState) => {

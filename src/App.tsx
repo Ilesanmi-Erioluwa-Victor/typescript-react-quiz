@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import QuestionsCard from "components/QuestionCard/QuestionCard";
 import { FetchApi } from "Hooks/API/Api";
-import { DifficultyState } from "Types/Types";
+import { DifficultyState, QuestionState  } from "Types/Types";
 
 const App = (): JSX.Element => {
   const [loading, setLoading] = useState<boolean>(false);
-  const [questions, setQuestions] = useState<string[]>([]);
+  const [questions, setQuestions] = useState<QuestionState[]>([]);
   const [number, setNumber] = useState<number>(0);
   const [userAnswers, setUserANswers] = useState<string[]>([]);
   const [score, setScore] = useState<number>(0);
   const [gameOver, setGameOver] = useState<boolean>(true);
 
    const TOTAL_QUESTIONS = 10;
-   
+
   console.log(FetchApi(TOTAL_QUESTIONS, DifficultyState.EASY))
 
  
