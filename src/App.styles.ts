@@ -20,3 +20,20 @@ justify-content : center;
     font-family : "Catamaran", sans-serif;
 }
 `
+
+export const Wrapper = styled.div`
+
+display : flex;
+flex-direction : column;
+align-items : center;
+
+> p {
+    color : white;
+}
+
+.score {
+    color : white;
+    font-size : 2rem;
+    margin : 0;
+}
+`
