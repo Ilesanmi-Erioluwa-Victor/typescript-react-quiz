@@ -36,4 +36,11 @@ align-items : center;
     font-size : 2rem;
     margin : 0;
 }
+
+h1 {
+    font-family : sans-serif;
+    background: linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
+    background-size : 100%;
+    backgound-clip : text;
+}
 `
