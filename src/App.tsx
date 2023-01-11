@@ -39,8 +39,12 @@ const App = (): JSX.Element => {
       </button>
       ) : null}
     
+    {!gameOver && (
       <p className="quiz__score">Score : </p>
-      <p className="loader">Loading Questions ...</p>
+    )}
+      
+      {loading && ( <p className="loader">Loading Questions ...</p>)}
+     
       {/* <QuestionsCard
       questionNum={number + 1}
       totalQuestions = {TOTAL_QUESTIONS}
