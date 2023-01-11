@@ -44,11 +44,20 @@ const App = (): JSX.Element => {
         correctAnswer : questions[number].correct_answer,
       };
 
-      setUserANswers( prev => [...prev, answerObject])
+      setUserANswers( (prev) => [...prev, answerObject])
     }
   };
 
-  const NextQuestion = () => {};
+  const NextQuestion = () => {
+    // Move to next provided not the last question...
+    const nextQuestion = number + 1;
+
+    if(nextQuestion === TOTAL_QUESTIONS) {
+      setGameOver(true)
+    } else {
+      setNumber(nextQuestion)
+    }
+  };
 
   return (
     <div className="App">
