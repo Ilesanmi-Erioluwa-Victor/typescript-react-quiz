@@ -13,9 +13,7 @@ const App = (): JSX.Element => {
 
    const TOTAL_QUESTIONS = 10;
 
-  console.log(FetchApi(TOTAL_QUESTIONS, DifficultyState.EASY))
-
- 
+   console.log(questions)
 
   const StartTrivia = async () => {
     setLoading(true);
