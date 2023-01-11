@@ -17,7 +17,12 @@ const App = (): JSX.Element => {
 
  
 
-  const StartTrivia = async () => {};
+  const StartTrivia = async () => {
+    setLoading(true);
+    setGameOver(false);
+
+    const newQuestion = await
+  };
 
   const CheckAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {};
 
