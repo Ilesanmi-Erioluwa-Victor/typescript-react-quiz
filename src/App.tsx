@@ -69,7 +69,7 @@ const App = (): JSX.Element => {
       ) : null}
     
     {!gameOver && (
-      <p className="quiz__score">Score : </p>
+      <p className="quiz__score">Score : {score}</p>
     )}
       
       {loading && ( <p className="loader">Loading Questions ...</p>)}
