@@ -24,6 +24,10 @@ const App = (): JSX.Element => {
     const newQuestion = await FetchApi(TOTAL_QUESTIONS, DifficultyState.EASY);
 
     setQuestions(newQuestion);
+    setScore(0);
+    setUserANswers([]);
+    setNumber(0);
+    setLoading(false);
   };
 
   const CheckAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {};
