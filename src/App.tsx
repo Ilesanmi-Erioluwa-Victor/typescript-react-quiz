@@ -30,6 +30,21 @@ const App = (): JSX.Element => {
     if(!gameOver) {
       // user Answer..
       const answer = e.currentTarget.value;
+      //  Check answer again
+      const correct = questions[number].correct_answer === answer
+
+      // add score if answer is correct
+      if(correct)setScore(prev => prev + 1)
+
+      // save question to answerObject
+      const answerObject = {
+        question: questions[number].question,
+        answer,
+        correct,
+        correctAnswer : questions[number].correct_answer,
+      };
+
+      setUserANswers( prev => [...prev, answerObject])
     }
   };
 
