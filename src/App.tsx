@@ -53,10 +53,13 @@ const App = (): JSX.Element => {
       userAnswer = {userAnswers ? userAnswers[number] : undefined}
       callback = {CheckAnswer}
       /> ) }
-      
-      <button className="next__ques" onClick={NextQuestion}>
+
+      {!gameOver && !loading && userAnswers.length === number + 1 && number !== TOTAL_QUESTIONS - 1 && (
+           <button className="next__ques" onClick={NextQuestion}>
         Next Question
       </button>
+      )}
+     
     </div>
   );
 };
