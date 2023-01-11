@@ -13,8 +13,6 @@ const App = (): JSX.Element => {
 
    const TOTAL_QUESTIONS = 10;
 
-   console.log(questions)
-
   const StartTrivia = async () => {
     setLoading(true);
     setGameOver(false);
@@ -35,10 +33,12 @@ const App = (): JSX.Element => {
   return (
     <div className="App">
       <h1> React Typescript Quiz Game</h1>
-
-      <button className="start__btn" onClick={StartTrivia}>
+      {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
+         <button className="start__btn" onClick={StartTrivia}>
         Start
       </button>
+      ) : null}
+    
       <p className="quiz__score">Score : </p>
       <p className="loader">Loading Questions ...</p>
       {/* <QuestionsCard
