@@ -45,14 +45,15 @@ const App = (): JSX.Element => {
       
       {loading && ( <p className="loader">Loading Questions ...</p>)}
      
-      {/* <QuestionsCard
+      {!loading && !gameOver &&( <QuestionsCard
       questionNum={number + 1}
       totalQuestions = {TOTAL_QUESTIONS}
       question = {questions[number].question}
       answers = {questions[number].answers}
       userAnswer = {userAnswers ? userAnswers[number] : undefined}
       callback = {CheckAnswer}
-      /> */}
+      /> ) }
+      
       <button className="next__ques" onClick={NextQuestion}>
         Next Question
       </button>
