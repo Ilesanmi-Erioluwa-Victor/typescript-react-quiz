@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import QuestionsCard from "components/QuestionCard/QuestionCard";
 import { FetchApi } from "Hooks/API/Api";
 import { DifficultyState, QuestionState, AnswerObject  } from "Types/Types";
-import { GlobalStyle } from "App.styles";
+import { GlobalStyle, Wrapper } from "App.styles";
 
 const App = (): JSX.Element => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -63,8 +63,8 @@ const App = (): JSX.Element => {
   return (
     <>
     <GlobalStyle />
-    <div className="App">
-      <h1> React Typescript Quiz Game</h1>
+    <Wrapper>
+      <h1> Typescript Quiz Game</h1>
       {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
          <button className="start__btn" onClick={StartTrivia}>
         Start
@@ -92,7 +92,7 @@ const App = (): JSX.Element => {
       </button>
       )}
      
-    </div>
+    </Wrapper>
     </>
   );
 };
