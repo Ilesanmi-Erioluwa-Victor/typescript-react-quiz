@@ -1,4 +1,4 @@
-import { ShuffleArray } from './../../utils/ShuffleArray';
+import { ShuffleArray } from 'utils/ShuffleArray';
 import { DifficultyState, Question} from 'Types/Types';
 
 
