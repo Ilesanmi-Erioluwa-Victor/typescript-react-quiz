@@ -66,7 +66,7 @@ const App = (): JSX.Element => {
     <Wrapper>
       <h1> Typescript Quiz Game</h1>
       {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
-         <button className="start__btn" onClick={StartTrivia}>
+         <button className="start" onClick={StartTrivia}>
         Start
       </button>
       ) : null}
@@ -87,7 +87,7 @@ const App = (): JSX.Element => {
       /> ) }
 
       {!gameOver && !loading && userAnswers.length === number + 1 && number !== TOTAL_QUESTIONS - 1 && (
-           <button className="next__ques" onClick={NextQuestion}>
+           <button className="next" onClick={NextQuestion}>
         Next Question
       </button>
       )}
